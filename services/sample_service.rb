@@ -11,7 +11,7 @@ class SampleService
 
   def run_sequentially
     self.class.generate_documents(@nr_of_documents)
-    false
+    nil
   end
 
   def run_concurrently
@@ -25,7 +25,7 @@ class SampleService
     end
 
     execute_concurrently('SampleService', 'generate_documents', arguments_array)
-    false
+    nil
   end
 
   def self.generate_documents(count)
